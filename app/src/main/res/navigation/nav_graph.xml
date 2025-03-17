@@ -19,6 +19,13 @@
         android:id="@+id/secondFragment"
         android:name="com.example.bsef22app.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+<!--        <argument-->
+<!--            android:name="userId"-->
+<!--            app:argType="integer" />-->
+<!--        <argument-->
+<!--            android:name="userName"-->
+<!--            app:argType="string" />-->
+    </fragment>
 
 </navigation>

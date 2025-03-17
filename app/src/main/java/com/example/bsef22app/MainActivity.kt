@@ -40,7 +40,16 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
             val navController = navHostFragment.navController
-            navController.navigate(R.id.action_blankFragment_to_secondFragment)
+
+            val bundle = Bundle()
+            bundle.putInt("userid", 1)
+            bundle.putString("username", "BSEF22")
+
+            navController.navigate(R.id.action_blankFragment_to_secondFragment, bundle)
+
+//            val action = BlankFragmentDirections.actionBlankFragmentToSecondFragment(123, "bse")
+//            navController.navigate(action)
+
         }
 
 
