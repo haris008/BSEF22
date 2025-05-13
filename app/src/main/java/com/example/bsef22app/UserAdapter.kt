@@ -21,19 +21,19 @@ class UserAdapter (
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val user = userList[position]
-        holder.bind(user)
-        holder.itemView.setOnClickListener { onItemClick(user) }
+//        holder.bind(user)
+//        holder.itemView.setOnClickListener { onItemClick(user) }
     }
 
     override fun getItemCount() = userList.size
 }
 
 class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    private val textName: TextView = itemView.findViewById(R.id.textName)
-    private val textEmail: TextView = itemView.findViewById(R.id.textEmail)
-
-    fun bind(user: User) {
-        textName.text = user.name
-        textEmail.text = user.email
-    }
+//    private val textName: TextView = itemView.findViewById(R.id.textName)
+//    private val textEmail: TextView = itemView.findViewById(R.id.textEmail)
+//
+//    fun bind(user: User) {
+//        textName.text = user.name
+//        textEmail.text = user.email
+//    }
 }

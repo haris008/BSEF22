@@ -39,7 +39,7 @@ class SecondFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second, container, false)
     }
-
+    var str:String? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -51,6 +51,16 @@ class SecondFragment : Fragment() {
             Log.d("haris", "userID is ${userID}")
             Log.d("haris", "username is ${userName}")
         }
+
+        arguments?.getInt("userid",0)
+        arguments?.getString("username")
+
+        val i = arguments?.let { bse ->
+            "string"
+        }
+
+
+
 //        Log.d("haris", "username is ${args.userName}")
 //        Log.d("haris", "userID is ${args.userId}")
 

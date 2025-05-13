@@ -15,19 +15,19 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/textName"
+            android:id="@+id/countryName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:text="testing
+            android:text="Pakistan
 "
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textEmail"
+            android:id="@+id/countryCapital"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="test email"
+            android:text="Islamabad"
             android:textSize="14sp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

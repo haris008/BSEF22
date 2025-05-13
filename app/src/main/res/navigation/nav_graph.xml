@@ -3,29 +3,19 @@
              xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/blankFragment">
-
+    app:startDestination="@id/blankFragment2">
     <fragment
-        android:id="@+id/blankFragment"
+        android:id="@+id/blankFragment2"
         android:name="com.example.bsef22app.BlankFragment"
         android:label="fragment_blank"
         tools:layout="@layout/fragment_blank" >
         <action
-            android:id="@+id/action_blankFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+            android:id="@+id/actionTakeMeToSecondFragment"
+            app:destination="@id/secondFragment2" />
     </fragment>
-
     <fragment
-        android:id="@+id/secondFragment"
+        android:id="@+id/secondFragment2"
         android:name="com.example.bsef22app.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" >
-<!--        <argument-->
-<!--            android:name="userId"-->
-<!--            app:argType="integer" />-->
-<!--        <argument-->
-<!--            android:name="userName"-->
-<!--            app:argType="string" />-->
-    </fragment>
-
+        tools:layout="@layout/fragment_second" />
 </navigation>

@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,6 +32,7 @@ class BlankFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
@@ -38,7 +41,22 @@ class BlankFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         Log.d("haris","fragment onCreateView")
-        return inflater.inflate(R.layout.fragment_blank, container, false)
+        val view =  inflater.inflate(R.layout.fragment_blank, container, false)
+
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.countryRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+
+        val list = listOf<Country>(
+            Country(countryName = "Pakistan", countryCapital = "Islamabad"),
+            Country(countryName = "India", countryCapital = "Delhi"),
+            Country(countryName = "Bangladesh", countryCapital = "Dhaka"),
+            Country(countryName = "Afghanistan", countryCapital = "Kabul"))
+
+        recyclerView.adapter = CountryAdapter(countries = list)
+
+
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
