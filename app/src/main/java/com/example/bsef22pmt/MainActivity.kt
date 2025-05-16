@@ -24,9 +24,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         val imageView = findViewById<ImageView>(R.id.imgView)
+
         Glide.with(this)
-        .load("https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_960_720.jpg")
-        .into(imageView);
+        .load("https://media.istockphoto.com/id/2113989619/photo/team-of-scientists-working-on-a-research-in-laboratory.jpg?s=1024x1024&w=is&k=20&c=r99mG06NPokMsWFj1dPHMqpHzhHU69OM-u4YIqxKRUA=")
+        .into(imageView)
+
 
 
         val apiService = RetrofitClient.apiService
